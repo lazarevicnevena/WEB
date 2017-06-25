@@ -1,0 +1,2 @@
+admin2|sifra|jelena|mikic|111-232-7478|mikiceva@yahoo.com|Strosmajerova 12|admin|false|null
+admin1|12345|milance kekeke|milanovic|111-111-1111|milan@gmail.com|Petra Drapsina 56|admin|false|null 

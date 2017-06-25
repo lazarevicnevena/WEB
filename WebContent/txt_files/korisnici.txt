@@ -1,0 +1,12 @@
+admin2|sifra|jelena|mikic|111-232-7478|mikiceva@yahoo.com|Strosmajerova 12|admin|false|null
+kraljica|123|nevena|lazarevic|111-111-1111|necapereca96@hotmail.com|ss|ordinary|false|null
+nikola|1|1|1|114-669-9989|necapereca96@hotmail.com|ss|ordinary|false|null
+ne|123|nevena|lazarevic|111-111-1111|necapereca96@hotmail.com|ss|ordinary|false|null
+mama|mia|kekek|laziiic|114-669-9989|lazarevic.nevena.43@gmail.com|petra drapsina|ordinary|false|null
+nevena|jejejej|nevenka|lazic|114-669-9989|lazarevic.nevena.43@gmail.com|ss|ordinary|false|null
+mimi|1|nevena|lazarevic|555-555-5555|necapereca96@hotmail.com|ss|ordinary|false|null
+guest|null|null|null|null|null|null|guest|false|null
+admin1|12345|milance kekeke|milanovic|111-111-1111|milan@gmail.com|Petra Drapsina 56|admin|false|\files\admin1\123.jpg
+korisnik|123|rados|acimovic|111-111-1111|phico007@gmail.com|12 aaa|ordinary|false|\files\korisnik\4.jpg
+zeks|123|zeljko|crnoglavac|114-669-9989|necapereca96@hotmail.com|Petra Drapsina 56|ordinary|false|\files\zeks\2.png
+neca|pereca|nevenaaaaaa kraljica|lazarevic|555-555-5555|necapereca96@hotmail.com|12 aaa|ordinary|false|\files\neca\1.jpg
