@@ -84,7 +84,6 @@
 					    <th width="75px">Username</th>
 					    <th width="100px">First Name</th>
 					    <th width="100px">Last Name</th>
-					    <th width="50px">Role</th>
 					    <th width="80px">Telephone</th>
 					    <th width="140px">Email</th>
 					    <th width="100px">Address</th>
@@ -103,10 +102,6 @@
 							<td width="100px"> 
 								<c:out value="${item.lastName}" />
 							</td>
-							<td width="50px"> 
-								<c:out value="${item.role}" />
-							</td>
-							
 							<td width="80px"> 
 								<c:out value="${item.telephoneNum}" />
 							</td>
@@ -120,7 +115,7 @@
 							<td style="display: inline;"> 
 								<c:if test="${ sessionScope.loggedUser.role == 'ordinary' || sessionScope.loggedUser.role == 'guest'}">
 									<c:if test="${item.picture == 'null'}">
-									<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}" alt="User" align="middle" />
+									<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 								</c:if>
 								<c:if test="${item.picture != 'null'}">
 									<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${item.picture}" alt="User" align="middle" />
@@ -131,34 +126,34 @@
 										<c:if test="${not item.blocked}" >
 											<c:if test="${item.role ==  'ordinary'}">
 												<a class="btn btn-default" href="/Project/BlockUserServlet/${item.username}" title="Block User">
-													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}"	 alt="User" align="middle" />
+													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User.png" align="middle" />
 												</a>
 											</c:if>
 											<c:if test="${item.role ==  'guest'}">
 												<a class="btn btn-default" onclick="return false;" href="/" title="You cannot block guests">
-													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}" alt="User" align="middle" />
+													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 												</a>
 											</c:if>
 											<c:if test="${item.role == 'admin'}">
 												<a class="btn btn-default" >
-													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}"	 alt="User" align="middle" />
+													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 												</a>
 											</c:if>
 										</c:if>
 										<c:if test="${item.blocked}" >
 											<c:if test="${item.role ==  'ordinary'}">
 												<a class="btn btn-default" href="/Project/BlockUserServlet/${item.username}" title="Unblock User">
-													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}" alt="User" align="middle" />
+													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User.png" align="middle" />
 												</a>
 											</c:if>
 											<c:if test="${item.role ==  'guest'}">
 												<a class="btn btn-default" onclick="return false;" href="/" title="You cannot block guests">
-													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}" alt="User" align="middle" />
+													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 												</a>
 											</c:if>
 											<c:if test="${item.role == 'admin'}">
 												<a class="btn btn-default" >
-													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}"	 alt="User" align="middle" />
+													<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 												</a>
 											</c:if>
 										</c:if>

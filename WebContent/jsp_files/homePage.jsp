@@ -531,7 +531,7 @@ function showDiv(id){
 														<td style="display: inline;"> 
 															
 																<c:if test="${item1.user.picture == 'null'}">
-																	<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}" alt="User" align="middle" />
+																	<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 																</c:if>
 																<c:if test="${item1.user.picture != 'null'}">
 																	<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${item1.user.picture}" alt="User" align="middle" />
@@ -561,10 +561,10 @@ function showDiv(id){
 					        <c:if test="${item.canBeCommented}">
 					        	<c:if test="${not sessionScope.loggedUser.blocked }">
 							        <td >					        	
-							        	<form id="form3" action="/Project/AddCommentServlet/${item.id}" method="post">
-							            	<input type="text" name="txtComment" width="100px"> 
-							            	<input type="submit" value="Add Comment"> 
-							            </form>
+							        	<form id="form3" class="form-inline" action="http://localhost:8080/Project/AddCommentServlet/${item.id}" method="post">
+							            	<input  class="form-control" style="width: 250px;" type="text" name="txtComment" width="100px"> 
+							           		<input class="btn btn-primary" type="submit" value="Comment"> 
+						            	</form>
 							        </td>
 						        </c:if>
 					        </c:if>
@@ -617,9 +617,13 @@ function showDiv(id){
 	<div id="updateProfile" class="container" style="display: none">
 	
 		
+		<c:if test="${ loggedUser.picture != 'null'}">
+			<img class="img-rounded" id="image" src="${pageContext.request.contextPath}${loggedUser.picture}" alt="User" align="middle" />
+		</c:if>
 		
-		<img class="img-rounded" id="image" src="${pageContext.request.contextPath}${loggedUser.picture}" alt="User" align="middle" />
-		
+		<c:if test="${ loggedUser.picture == 'null'}">
+			<img class="img-rounded" id="image" src="../images/user.png" alt="User" align="middle" />
+		</c:if>
 	
 		<div class="my-panel vertical-center" id="pic">
 			<form name="form2" class="form-horizontal" method="POST" action="/Project/UploadServlet" enctype="multipart/form-data">

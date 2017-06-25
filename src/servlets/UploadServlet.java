@@ -73,6 +73,9 @@ public class UploadServlet extends HttpServlet {
 									.getRealPath("")
 									+ "/files/"+user.getUsername()+"/"+fileName);
 							
+							System.out.println("utanja: " + getServletContext()
+									.getRealPath("")
+									+ "/files/"+user.getUsername()+"/"+fileName);
 							user.setPicture("\\files\\"+user.getUsername()+"\\"+fileName);
 							
 							AllUsers au = new AllUsers();

@@ -2,7 +2,7 @@ package java_files;
 
 public class Files {
 	
-	public static String osnova = "C:\\Users\\Nevena Lazarevic\\workspace\\WebProject\\Project\\WebContent\\";
+	public static String osnova = "C:\\Users\\Nevena Lazarevic\\git\\WEB\\WebContent\\";
 	
 	public static String pathUsers =  osnova + "txt_files\\korisnici.txt";
 	public static String pathAdmins =  osnova +"txt_files\\administratori.txt";

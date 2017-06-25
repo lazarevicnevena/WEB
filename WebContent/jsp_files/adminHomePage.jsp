@@ -115,7 +115,7 @@ function showDiv(id){
 		var Msg ='<%=session.getAttribute("errorMsg")%>';
 		if (Msg != ' ') {
 			alert(Msg);
-			session.setAttribute("errorMsg", " ");
+			<% session.setAttribute("errorMsg", ' '); %>
 		}
 		
 		var img1 = '<%= session.getAttribute("pic")%>';
@@ -606,34 +606,34 @@ function showDiv(id){
 																	<c:if test="${not item1.user.blocked}" >
 																		<c:if test="${item1.user.role ==  'ordinary'}">
 																			<a class="btn btn-default" href="/Project/BlockUserServlet/${item1.user.username}" title="Block User">
-																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}"	 alt="User" align="middle" />
+																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 																			</a>
 																		</c:if>
 																		<c:if test="${item1.user.role ==  'guest'}">
 																			<a class="btn btn-default" onclick="return false;" href="/" title="You cannot block guests">
-																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}" alt="User" align="middle" />
+																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 																			</a>
 																		</c:if>
 																		<c:if test="${item1.user.role == 'admin'}">
 																			<a class="btn btn-default" >
-																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}"	 alt="User" align="middle" />
+																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 																			</a>
 																		</c:if>
 																	</c:if>
 																	<c:if test="${item1.user.blocked}" >
 																		<c:if test="${item1.user.role ==  'ordinary'}">
 																			<a class="btn btn-default" href="/Project/BlockUserServlet/${item1.user.username}" title="Unblock User">
-																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}" alt="User" align="middle" />
+																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 																			</a>
 																		</c:if>
 																		<c:if test="${item1.user.role ==  'guest'}">
 																			<a class="btn btn-default" onclick="return false;" href="/" title="You cannot block guests">
-																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}" alt="User" align="middle" />
+																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 																			</a>
 																		</c:if>
 																		<c:if test="${item1.user.role == 'admin'}">
 																			<a class="btn btn-default" >
-																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="${pageContext.request.contextPath}${sessionScope.altPic}"	 alt="User" align="middle" />
+																				<img class="img-rounded" id="image1" style="width: 50px;height: 50px;" src="../images/user.png" alt="User" align="middle" />
 																			</a>
 																		</c:if>
 																	</c:if>
@@ -692,9 +692,9 @@ function showDiv(id){
 				    	<tr>
 					        <c:if test="${item.canBeCommented}">
 						        <td >					        	
-						        	<form id="form3" action="http://localhost:8080/Project/AddCommentServlet/${item.id}" method="post">
-						            	<input type="text" name="txtComment" width="100px"> 
-						            	<input type="submit" value="Add Comment"> 
+						        	<form id="form3" class="form-inline" action="http://localhost:8080/Project/AddCommentServlet/${item.id}" method="post">
+							            <input  class="form-control" style="width: 250px;" type="text" name="txtComment" width="100px"> 
+							           	<input class="btn btn-primary" type="submit" value="Comment"> 
 						            </form>
 						        </td>
 					        </c:if>
@@ -762,7 +762,13 @@ function showDiv(id){
 	<div id="updateProfile" class="container" style="display: none">
 	
 		
-		<img class="img-rounded" id="image" src="${pageContext.request.contextPath}${loggedUser.picture}" alt="User" align="middle" />
+		<c:if test="${ loggedUser.picture != 'null'}">
+			<img class="img-rounded" id="image" src="${pageContext.request.contextPath}${loggedUser.picture}" alt="User" align="middle" />
+		</c:if>
+		
+		<c:if test="${ loggedUser.picture == 'null'}">
+			<img class="img-rounded" id="image" src="../images/user.png" alt="User" align="middle" />
+		</c:if>
 		
 		<div class="my-panel vertical-center" id="pic">
 			<form name="form2" class="form-horizontal" method="POST" action="/Project/UploadServlet" enctype="multipart/form-data">
