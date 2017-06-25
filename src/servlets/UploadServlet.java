@@ -16,7 +16,6 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.fileupload.servlet.ServletRequestContext;
 
-import com.sun.xml.internal.stream.Entity;
 
 import java_files.AllUsers;
 import java_files.CommentHandler;
