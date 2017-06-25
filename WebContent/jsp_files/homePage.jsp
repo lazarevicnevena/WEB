@@ -452,7 +452,7 @@ function showDiv(id){
 				    	<tr align="center">
 				    		<td>
 					    		<c:if test="${not empty sessionScope.comments}">
-						    		<table align="center" class="table table-striped" id="comments" style="white-space: nowrap;margin:auto;border:solid; width:50%">
+						    		<table align="center" class="table table-hover" id="comments" style="white-space: nowrap;margin:auto;border:1 px solid #eee; width:50%">
 										
 										<tbody  id="tbody1">
 											<c:forEach items="${sessionScope.comments}" var="item1">

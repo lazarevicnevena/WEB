@@ -11,3 +11,4 @@ zeks|123|zeljko|crnoglavac|114-669-9989|necapereca96@hotmail.com|Petra Drapsina 
 neca|pereca|nevenaaaaaa kraljica|lazarevic|555-555-5555|necapereca96@hotmail.com|12 aaa|ordinary|false|\files\neca\2.png
 admin1|12345|milance kekeke|milanovic|111-111-1111|milan@gmail.com|Petra Drapsina 56|admin|false|\files\admin1\4.jpg
 jeca|123|jelena|peric|111-111-1111|necapereca96@hotmail.com|Petra Drapsina 56|ordinary|false|null
+novi|1|nevena|sssss|111-111-1111|necapereca96@hotmail.com||ordinary|false|null

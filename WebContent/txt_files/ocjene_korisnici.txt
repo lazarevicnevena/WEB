@@ -1,4 +1,10 @@
 ne|1|1
 neca|1|1
 neca|3|1
-neca|4|1
+zeks|4|1
+admin1|3|1
+admin1|4|1
+admin1|5|-1
+mama|3|1
+mama|1|1
+zeks|3|1
